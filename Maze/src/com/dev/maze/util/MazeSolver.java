@@ -6,7 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import com.dev.maze.model.Behind;
@@ -21,7 +20,6 @@ public class MazeSolver {
 	private static final char CHEESE = 'C';
 	private static final char EXIT = 'E';
 	private static final char POINT = '.';
-	private char position = 65;
 	
 	
 	public MazeSolver( File file ) {
@@ -89,7 +87,7 @@ public class MazeSolver {
                               };
             
             for(int count = 0; count < movement.length; count++) {
-				Point point = movement[count].move(); // 
+				Point point = movement[count].move(); // Attention point
 				if( movement[count].isValid() ) {
 					nextStep.add( point );
 				}
@@ -117,14 +115,7 @@ public class MazeSolver {
 		char character = maze[coordinatesX][coordinatesY];
 		
 		if(character == POINT || character == CHEESE || character == START || character == EXIT) {
-//			maze[coordinatesX][coordinatesY] = '@';
-			maze[coordinatesX][coordinatesY] = position;
-			position++;
-			if( position == 91 ) {
-				position = 97;
-			} else if( position == 123 ) {
-				position = 65;
-			}
+			maze[coordinatesX][coordinatesY] = '@';
 		}
 	}
 	
