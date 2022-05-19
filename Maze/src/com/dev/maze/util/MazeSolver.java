@@ -21,7 +21,7 @@ public class MazeSolver {
 	private static final char CHEESE = 'C';
 	private static final char EXIT = 'E';
 	private static final char POINT = '.';
-//	private char position = 65;
+	private char position = 65;
 	
 	
 	public MazeSolver( File file ) {
@@ -117,12 +117,14 @@ public class MazeSolver {
 		char character = maze[coordinatesX][coordinatesY];
 		
 		if(character == POINT || character == CHEESE || character == START || character == EXIT) {
-			maze[coordinatesX][coordinatesY] = '@';
-//			maze[coordinatesX][coordinatesY] = position;
-//			position++;
-//			if( position == 91 ) {
-//				position = 97;
-//			}
+//			maze[coordinatesX][coordinatesY] = '@';
+			maze[coordinatesX][coordinatesY] = position;
+			position++;
+			if( position == 91 ) {
+				position = 97;
+			} else if( position == 123 ) {
+				position = 65;
+			}
 		}
 	}
 	
