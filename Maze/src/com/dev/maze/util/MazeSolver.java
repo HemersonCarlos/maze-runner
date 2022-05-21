@@ -80,11 +80,12 @@ public class MazeSolver {
 		if( currentCharacter == EXIT ) {
 			return;
 		} else {
-            Walk[] movement = { new Right( maze, currentPoint ), 
-                                new Front( maze, currentPoint ),
-                                new Left( maze, currentPoint ),
-                                new Behind( maze, currentPoint )
-                              };
+            Walk[] movement = {
+            		new Right( maze, currentPoint ), 
+            		new Front( maze, currentPoint ), 
+            		new Left( maze, currentPoint ), 
+            		new Behind( maze, currentPoint ) 
+            };
             
             for(int count = 0; count < movement.length; count++) {
 				Point point = movement[count].move(); // Attention point
