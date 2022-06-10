@@ -1,0 +1,7 @@
+Ideias para fazer o melhoramento do labirinto do maze
+
+1º - Fazer o labirinto ser uma api, e após isso com outros sistemas consumir ele e assim apresentar mais bonito na tela.
+
+2º - Gerar um arquivo html e gerar um arquivo js para consumir esse arquivo html.
+
+3º - Mudar a aplicação para um spring boot e usar ela para apresentar de forma melhor na tela.
